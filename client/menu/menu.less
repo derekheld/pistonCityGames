@@ -1,0 +1,41 @@
+
+#top-bar {
+  position: sticky;
+  background-color: black;
+  display: flex;
+  flex-shrink:0;
+  height:60px;
+  align-items: stretch;
+  border-bottom: 1px solid #fafafa;
+  box-shadow: 0 2px 25px #000;
+  .nav-option {
+    border-right: 1px solid #def;
+    display: flex;
+    flex-direction:column;
+    padding: 10px 20px 5px 20px;
+    cursor: pointer;
+    justify-content: space-around;
+    background-color: #222;
+    &.beatdown-nav {
+      .title {
+        font-family: Vinnie;
+      }
+      .subtitle {
+        font-family: Arial;
+        word-spacing: 4px;
+        letter-spacing: 1.7px;
+      }
+    }
+
+    &.corruption-nav {
+      font-family: Abduction;
+    }
+    .title {
+      font-size: 20px;
+      letter-spacing: 2px;
+    }
+    .subtitle {
+      font-size: 12px;
+    }
+  }
+}

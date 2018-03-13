@@ -1,0 +1,59 @@
+@import "/client/less/colors.less";
+
+#beatdown-page {
+  .read-block {
+    border-color: @beatdown_red;
+    background-color: @beatdown_tansparent;
+    color: black;
+    text-shadow: initial;
+    border-width: 2px;
+    overflow: hidden;
+    min-width: 650px;
+
+    .summary {
+      margin-top: 50px;
+      border-top: 1px solid @beatdown_red;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      ul {
+        font-size: 20px;
+        min-width: 450px;
+        flex-basis: 450px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-self: center;
+        line-height: 1.5;
+      }
+
+      .game-preview {
+        flex-grow: 2;
+        max-width: 550px;
+        min-width: 250px;
+        flex-basis: 250px;
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+    .social-media{
+      padding-top: 20px;
+      border-top: 1px solid @beatdown_red;
+      .space-around>*{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+          text-shadow: 2px 2px 2px rgba(0,0,0,.5);
+        i.fa{
+          padding:10px;
+          color:@beatdown_blue;
+          font-size: 44px;
+        }
+      }
+    }
+  }
+}
