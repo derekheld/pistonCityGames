@@ -3,8 +3,9 @@ Router.configure({
 });
 
 Router.map(function() {
-    this.route('home', {
-        path: '/'
+    this.route('/', {
+        name: 'default',
+        template: 'beatdown',
     });
     this.route('beatdown', {
         path: '/beatdown'

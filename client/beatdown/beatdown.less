@@ -2,6 +2,21 @@
 
 #beatdown-page {
   max-width: 1350px;
+  .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+      max-width:500px;
+      height: auto;
+    }
+  }
+  .header{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
   .read-block {
     border-color: @beatdown_red;
     background-color: @beatdown_tansparent;
@@ -11,8 +26,11 @@
     overflow: hidden;
     min-width: 650px;
 
-    &>*:not(:last-child) {
+    &>*{
+      padding: 20px;
+      &:not(:last-child) {
       border-bottom: 1px solid @beatdown_red;
+    }
     }
 
     .summary {
@@ -28,25 +46,13 @@
         flex-basis: 450px;
         flex-grow: 1;
         align-items: flex-start;
+        justify-content: center;
         ul {
           font-size: 20px;
           display: flex;
           flex-direction: column;
           align-content: center;
           line-height: 1.5;
-        }
-        .mailing-list-button {
-          background: linear-gradient(-180deg, @beatdown_red 0%, @beatdown_dark_red 100%);
-          box-shadow: 2px 2px 2px black;
-          padding: 15px 50px;
-          border-radius: 4px;
-          margin: 20px;
-          transition-duration: .2s;
-          &:active{
-            padding:17px 48px 13px 52px;
-            background: @beatdown_dark_red;
-          box-shadow: 2px 2px 2px rgba(0,0,0,.7) inset;
-          }
         }
       }
 
@@ -76,4 +82,20 @@
       }
     }
   }
+
+        .mailing-list-button {
+          background: linear-gradient(-180deg, @beatdown_red 0%, @beatdown_dark_red 100%);
+          box-shadow: 2px 2px 2px black;
+          padding: 15px 50px;
+          border-radius: 4px;
+          margin-left: 20px;
+          &:hover{
+            background: @beatdown_red;
+          }
+          &:active{
+            padding:17px 48px 13px 52px;
+            background: @beatdown_dark_red;
+          box-shadow: 2px 2px 2px rgba(0,0,0,.7) inset;
+          }
+        }
 }
