@@ -1,6 +1,7 @@
 @import "/client/less/colors.less";
 
 #beatdown-page {
+  max-width: 1350px;
   .read-block {
     border-color: @beatdown_red;
     background-color: @beatdown_tansparent;
@@ -10,23 +11,43 @@
     overflow: hidden;
     min-width: 650px;
 
+    &>*:not(:last-child) {
+      border-bottom: 1px solid @beatdown_red;
+    }
+
     .summary {
       margin-top: 50px;
-      border-top: 1px solid @beatdown_red;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
 
-      ul {
-        font-size: 20px;
+      .about-the-game {
+        display: flex;
+        flex-direction: column;
         min-width: 450px;
         flex-basis: 450px;
         flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        align-self: center;
-        line-height: 1.5;
+        align-items: flex-start;
+        ul {
+          font-size: 20px;
+          display: flex;
+          flex-direction: column;
+          align-content: center;
+          line-height: 1.5;
+        }
+        .mailing-list-button {
+          background: linear-gradient(-180deg, @beatdown_red 0%, @beatdown_dark_red 100%);
+          box-shadow: 2px 2px 2px black;
+          padding: 15px 50px;
+          border-radius: 4px;
+          margin: 20px;
+          transition-duration: .2s;
+          &:active{
+            padding:17px 48px 13px 52px;
+            background: @beatdown_dark_red;
+          box-shadow: 2px 2px 2px rgba(0,0,0,.7) inset;
+          }
+        }
       }
 
       .game-preview {
@@ -40,17 +61,16 @@
         }
       }
     }
-    .social-media{
+    .social-media {
       padding-top: 20px;
-      border-top: 1px solid @beatdown_red;
-      .space-around>*{
+      .space-around>* {
         display: flex;
-        flex-direction:column;
+        flex-direction: column;
         align-items: center;
-          text-shadow: 2px 2px 2px rgba(0,0,0,.5);
-        i.fa{
-          padding:10px;
-          color:@beatdown_blue;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+        i.fa {
+          padding: 10px;
+          color: @beatdown_blue;
           font-size: 44px;
         }
       }
