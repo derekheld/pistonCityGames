@@ -15,7 +15,10 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    margin-bottom: 20px;
+    flex-wrap: wrap;
+    &>*{
+      margin-bottom: 20px;
+    }
   }
   .read-block {
     border-color: @beatdown_red;
@@ -84,11 +87,11 @@
   }
 
         .mailing-list-button {
+          flex-shrink: 0;
           background: linear-gradient(-180deg, @beatdown_red 0%, @beatdown_dark_red 100%);
           box-shadow: 2px 2px 2px black;
           padding: 15px 50px;
           border-radius: 4px;
-          margin-left: 20px;
           &:hover{
             background: @beatdown_red;
           }

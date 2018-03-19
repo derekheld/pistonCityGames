@@ -10,6 +10,9 @@ Router.map(function() {
     this.route('beatdown', {
         path: '/beatdown'
     });
+    this.route('beatdownRules', {
+        path: '/beatdown/rules'
+    });
     this.route('corruption', {
         path: '/corruption'
     });
