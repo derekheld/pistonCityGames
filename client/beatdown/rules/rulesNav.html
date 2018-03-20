@@ -2,7 +2,7 @@
   <div id="beatdown-rules-nav">
     <div class="entries">
     {{#each rulesSections}}
-        <div class="entry">{{name}}</div>
+        <div {{b "class: {selected: sectionSelected(this)}, click: selectSection(this)"}} class="entry">{{name}}</div>
     {{/each}}
   </div>
     <div class="search-holder">
