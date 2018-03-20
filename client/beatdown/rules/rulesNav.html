@@ -1,8 +1,12 @@
 <template name="beatdownRulesNav">
   <div id="beatdown-rules-nav">
-    <div class="entry selected">Game Overview</div>
-    <div class="entry">Fight Overview</div>
-    <div class="entry">Round Overview</div>
-    <div class="entry">Turn Overview</div>
+    <div class="entries">
+    {{#each rulesSections}}
+        <div class="entry">{{name}}</div>
+    {{/each}}
+  </div>
+    <div class="search-holder">
+      <input/>
+    </div>
   </div>
 </template>

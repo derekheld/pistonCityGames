@@ -3,8 +3,22 @@
     <div class="read-block">
     <div id="beatdown-rules">
       {{>beatdownRulesNav}}
-      <div class="rules-body"></div>
+      <div class="rules-body">
+        {{>beatdownRulesOverview}}
+      </div>
     </div>
   </div>
+  </div>
+</template>
+
+<template name="beatdownRulesOverview">
+  <div class="rule-section">
+    <div class="section-header">Enemy Critical Hits</div>
+      <p>An enemy critically strikes if their attack's targeted area (notated at the bottom of an enemy attack card) includes a location that is exposed on the attack's target. (Current player, or player denoted by the enemy attack card).</p>
+      <ul>
+        <li>During the enemy attack phase, ALL areas are considered exposed for players.</li>
+        <li>Since protection completely cancels an enemy attack, an enemy cannot critically attack a player who is protected at an area targeted by an attack. Instead their protection loses one durability. (see ENEMY ATTACKS)</li> 
+        <li>An enemy attack that does not have a target area cannot critically strike. </li>
+    </ul>
   </div>
 </template>
