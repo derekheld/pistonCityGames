@@ -1,17 +1,17 @@
 <template name="beatdownRules">
   <div id="beatdown-page">
     <div class="read-block">
-    <div id="beatdown-rules">
-      {{>beatdownRulesNav}}
-      <div class="rules-body">
-        {{#each rulesInSection}}
-        <div class="rule-section">
-          <div class="section-header">{{name}}</div>
-          {{{content}}}
+      <div id="beatdown-rules">
+        {{>beatdownRulesNav}}
+        <div class="rules-body">
+          {{#each rulesInSection}}
+          <div class="rule-section">
+            <div class="section-header">{{name}}</div>
+            {{{content}}}
+          </div>
+          {{/each}}
         </div>
-        {{/each}}
-        </div>
+      </div>
     </div>
-  </div>
   </div>
 </template>
