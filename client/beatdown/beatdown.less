@@ -5,6 +5,55 @@
     margin-top:5px;
     margin-bottom:10px;
   }
+  .flextable{
+    @border: 1px solid @beatdown_red;
+    border:2px solid black;
+    margin: 20px 10px;
+    background-color: #efefef;
+    display: flex;
+    flex-direction: column;
+    cursor: default;
+    .row{
+      display: flex;
+      &.header-row{
+        background-color: @beatdown_dark_red;
+        border-bottom:4px solid black;
+        color: white;
+      }
+      &>*{
+        width: 15%;
+        padding:10px;
+          &:not(:last-child){
+          border-right: 2px solid black;
+        }
+        &:first-child{
+          font-weight: bold;
+          width:40%;
+        }
+      &:not(:first-child){
+        display: flex;
+        justify-content: center;
+      }
+        &.big-cell{
+          width: 60%;
+        }
+        box-sizing: border-box;
+      }
+      &.fight-row{
+        &:not(:last-child){
+          border-bottom: @border;
+        }
+        &:hover{
+          background-color: #def;
+        }
+        &>*{
+        &:hover{
+          background-color: #bdf;
+        }
+        }
+      }
+    }
+  }
   max-width: 1350px;
   .logo{
     display: flex;

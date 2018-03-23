@@ -2,11 +2,11 @@
   <div id="beatdown-rules-nav">
     <div class="entries">
     {{#each rulesSections}}
-        <div {{b "class: {selected: sectionSelected(this)}, click: selectSection(this)"}} class="entry">{{name}}</div>
+        <div {{b "class: {selected: sectionSelected(this)}, click: selectSection(this)"}} class="entry"><span class="inner-entry">{{name}}</span></div>
     {{/each}}
   </div>
     <div class="search-holder">
-      <input placeholder="Search for a rule" />
+      <input disabled placeholder="Search coming soon..." />
     </div>
   </div>
 </template>

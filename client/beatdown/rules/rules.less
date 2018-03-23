@@ -1,3 +1,5 @@
+@import "/client/less/colors.less";
+
 #beatdown-rules{
   @border_color:#666;
   @bg_color: #e8e0c4;
@@ -11,7 +13,7 @@
     .entries{
       display: flex;
       max-width:100%;
-      flex-grow:1;
+      flex-grow:2;
     .entry{
       border:@border_width solid @border_color;
       border-bottom:0;
@@ -25,9 +27,15 @@
       user-select: none;
       white-space: nowrap;
       flex-basis:100px;
-          text-align: center;
+      align-items: center;
+    display: flex;
+    justify-content: center;
       overflow: hidden;
       text-overflow: ellipsis;
+      .inner-entry{
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
       &:not(.selected):hover{
         background-color: #def;
       }
@@ -36,7 +44,6 @@
         flex-shrink: 0;
         overflow: initial;
         text-overflow: initial;
-        flex-basis: initial;
         width: initial;
         margin-bottom: -2px;
       }
@@ -60,6 +67,7 @@
         font-family:Arial;
         font-size:16px;
         border:2px solid @border_color;
+        cursor: not-allowed;
       }
     }
   }
@@ -70,6 +78,14 @@
       border-radius: 5px;
       border-top-left-radius: 0;
       padding:20px;
+        .pro-tip{
+          border: 1px solid @border_color;
+          border-radius: 3px;
+          padding: 1px 3px;
+          background-color: #dfd;
+          white-space: nowrap;
+          font-size: small;
+        }
       .rule-section{
         margin-bottom:30px;
         .section-header{
